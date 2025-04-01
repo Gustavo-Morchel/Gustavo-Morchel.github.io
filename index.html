@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Morchel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Tamil:wght@100..800&family=Bungee+Tint&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-balls">
+        <script>
+            function createBalls(num) {
+                for (let i = 0; i < num; i++) {
+                    let ball = document.createElement("div");
+                    ball.classList.add("ball");
+                    let size = Math.random() * 3 + 1;
+                    ball.style.width = `${size}px`;
+                    ball.style.height = `${size}px`;
+                    ball.style.top = `${Math.random() * 100}%`;
+                    ball.style.left = `${Math.random() * 100}%`;
+                    ball.style.animationDuration = `${Math.random() * 20 + 15}s`;
+                    document.querySelector(".background-balls").appendChild(ball);
+                }
+            }
+            createBalls(200);
+        </script>
+    </div>
+    <div class="container">
+        <div class="social-icons">
+            <a href="https://www.facebook.com/gustavomorchel"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UCf3-yLmuKzH5g7F6KFd8wWw"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://github.com/gustavomorchel"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gustavomorchel/"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+        <div class="profile">
+            <img src="https://preview.redd.it/r3lcc7gf64791.png?width=540&format=png&auto=webp&s=9d32ec46f884486fd59dfd01453bf5d07bf30d75" alt="Gustavo Morchel">
+            <h2>Gustavo Morchel</h2>
+        </div>
+        <div class="links">
+             <a href="https://www.instagram.com/gustavomorchel/"><i class="fa-brands fa-instagram space"></i>Instagram</a>
+            <a href="https://www.youtube.com/channel/UCf3-yLmuKzH5g7F6KFd8wWw"><i class="fa-brands fa-youtube space"></i>YouTube</a>
+            <a href="https://github.com/gustavomorchel"><i class="fa-brands fa-github space"></i>GitHub</a>
+            <a href="https://www.linkedin.com/in/gustavomorchel/"><i class="fa-brands fa-linkedin space"></i>Linkedin</a>
+        </div>
+        <button id="mostrarProjetos">Meus Projetos</button>
+    </div>
+    <div class="projetos-container" id="projetosContainer">
+        <div class="projeto-card">
+            <h3>Projeto 1: Landing Page Incrivel</h3>
+            <p>Uma landing page de alta conversão para apresentar seu produto ou serviço.</p>
+            <a href="#">Ver Projeto</a>
+        </div>
+        <div class="projeto-card">
+            <h3>Projeto 2: E-commerce Moderno</h3>
+            <p>Uma loja online completa com design moderno e experiência de usuário otimizada.</p>
+            <a href="#">Ver Projeto</a>
+        </div>
+        <div class="projeto-card">
+            <h3>Projeto 3: Portfólio Criativo</h3>
+            <p>Um portfólio único e interativo para destacar seus melhores trabalhos.</p>
+            <a href="#">Ver Projeto</a>
+        </div>
+    </div>
+    <script>
+        const mostrarProjetosBtn = document.getElementById("mostrarProjetos");
+        const projetosContainer = document.getElementById("projetosContainer");
+
+        projetosContainer.style.display = "none";
+        mostrarProjetosBtn.addEventListener("click", () => {
+            if (projetosContainer.style.display === "none") {
+                projetosContainer.style.display = "flex";
+                projetosContainer.style.flexDirection = "row";
+                projetosContainer.style.flexWrap = "wrap";
+                mostrarProjetosBtn.textContent = "Esconder Projetos";
+            } else {
+                projetosContainer.style.display = "none";
+                mostrarProjetosBtn.textContent = "Meus Projetos";
+            }
+        });
+    </script>
+</body>
+</html>

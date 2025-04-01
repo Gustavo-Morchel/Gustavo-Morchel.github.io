@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Anek Tamil", sans-serif;
+}
+body {
+    background: linear-gradient(135deg, #000428, #9b31a5, #000428);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.container {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    position: relative;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: white;
+    color: #000428;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.social-icons a:hover {
+    background: #ffffff;
+    color: #004e92;
+    transform: scale(1.1);
+}
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #9b31a5;
+}
+.profile h2 {
+    color: white;
+    margin: 15px 0;
+    font-size: 24px;
+}
+.links a {
+    display: block;
+    background: white;
+    color: #000428;
+    text-decoration: none;
+    padding: 15px;
+    margin: 12px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+.links a:hover {
+    color: #004e92;
+    transform: scale(1.05);
+}
+.background-balls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+.ball {
+    position: absolute;
+    width: 1.5px;
+    height: 1.5px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: move 20s infinite ease-in-out;
+}
+@keyframes move {
+    0% { transform: translateY(0px) translateX(0px); }
+    50% { transform: translateY(-250px) translateX(250px); }
+    100% { transform: translateY(0px) translateX(0px); }
+}
+.space{
+    margin-right: 1rem;
+}
+
+#mostrarProjetos {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000428;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    font-family: "Anek Tamil", sans-serif;
+    font-weight: bold;
+}
+
+#mostrarProjetos:hover {
+    background-color: #004e92;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.projetos-container {
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.projeto-card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.projeto-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.projeto-card h3 {
+    font-size: 20px;
+    color: #000428;
+    margin-bottom: 10px;
+}
+
+.projeto-card p {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.projeto-card a {
+    display: inline-block;
+    background-color: #004e92;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    font-size: 16px;
+}
+
+.projeto-card a:hover {
+    background-color: #000428;
+    transform: scale(1.05);
+}
